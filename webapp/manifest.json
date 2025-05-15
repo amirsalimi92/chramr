@@ -27,9 +27,7 @@
         "uri": "/sap/opu/odata/sap/ZUI_ESR_UI5_WS/",
         "type": "OData",
         "settings": {
-          "annotations": [
-            "ZUI_ESR_UI5_WS_VAN"
-          ],
+          "annotations": ["ZUI_ESR_UI5_WS_VAN"],
           "localUri": "localService/mainService/metadata.xml",
           "odataVersion": "2.0"
         }
@@ -53,7 +51,7 @@
     }
   },
   "sap.ui5": {
-    "flexEnabled": true,
+    "flexEnabled": false,
     "dependencies": {
       "minUI5Version": "1.135.0",
       "libs": {
@@ -101,9 +99,7 @@
         {
           "name": "RouteView1",
           "pattern": ":?query:",
-          "target": [
-            "TargetView1"
-          ]
+          "target": ["TargetView1"]
         }
       ],
       "targets": {
