@@ -73,7 +73,11 @@
       "": {
         "dataSource": "mainService",
         "preload": true,
-        "settings": {}
+        "settings": {
+          "defaultBindingMode": "TwoWay",
+          "useBatch": true
+        },
+        "type": "sap.ui.model.odata.v2.ODataModel"
       }
     },
     "resources": {
@@ -100,12 +104,23 @@
           "name": "RouteView1",
           "pattern": ":?query:",
           "target": ["TargetView1"]
+        },
+        {
+          "name": "Detail",
+          "pattern": "detail/{productId}",
+          "target": ["TargetDetail"]
         }
       ],
       "targets": {
         "TargetView1": {
-          "id": "View1",
-          "name": "View1"
+          "viewName": "View1",
+          "viewId": "View1",
+          "viewLevel": 1
+        },
+        "TargetDetail": {
+          "viewName": "Detail",
+          "viewId": "Detail",
+          "viewLevel": 2
         }
       }
     },

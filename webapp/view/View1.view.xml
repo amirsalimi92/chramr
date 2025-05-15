@@ -1,26 +1,37 @@
-<mvc:View xmlns:semantic="sap.f.semantic"
-    xmlns:smarttable="sap.ui.comp.smarttable" controllerName="de.cpro.schulung.chramr.controller.View1"
+<mvc:View controllerName="de.cpro.schulung.chramr.controller.View1"
+    xmlns:semantic="sap.f.semantic"
+    xmlns:smarttable="sap.ui.comp.smarttable"
     xmlns:mvc="sap.ui.core.mvc"
+    xmlns:app="http://schemas.sap.com/sapui5/extension/sap.ui.core.CustomData/1"
     xmlns:core="sap.ui.core"
     xmlns="sap.m"
     xmlns:smartFilterBar="sap.ui.comp.smartfilterbar">
     <Page id="page" title="{i18n>title}">
         <semantic:SemanticPage id="semantic">
+
+            <!-- Filter area -->
             <semantic:headerContent>
-                <smartFilterBar:SmartFilterBar id="smartFilterBar" entitySet="ZC_ESR_UI5_PRODUCT" basicSearchFieldName="ProductName" enableBasicSearch="true" persistencyKey="PKeyFilterbar">
-
-                </smartFilterBar:SmartFilterBar>
-
+                <smartFilterBar:SmartFilterBar id="smartFilterBar" entitySet="ZC_ESR_UI5_PRODUCT" basicSearchFieldName="ProductName" enableBasicSearch="true" persistencyKey="PKeyFilterbar" />
+                <HBox justifyContent="End">
+                    <OverflowToolbar>
+                        <Button text="Add" icon="sap-icon://add" press="onAdd"/>
+                        <Button text="Edit" icon="sap-icon://edit" press="onEdit"/>
+                        <Button text="Delete" icon="sap-icon://delete" press="onDelete"/>
+                    </OverflowToolbar>
+                </HBox>
             </semantic:headerContent>
+
+            <!-- Table -->
             <semantic:content>
-                <smarttable:SmartTable fieldChange="onChange" smartFilterId="smartFilterBar" id="products" entitySet="ZC_ESR_UI5_PRODUCT" enableAutoBinding="true" editable="false">
+                <smarttable:SmartTable id="products" entitySet="ZC_ESR_UI5_PRODUCT" smartFilterId="smartFilterBar" tableType="ResponsiveTable" app:useSmartToggle="true" useVariantManagement="true" useTablePersonalisation="true" header="Line Items" showRowCount="true" persistencyKey="SmartTableAnalytical_Explored" enableAutoBinding="true" class="sapUiResponsiveContentPadding" enableAutoColumnWidth="true" fieldChange="onChange" editTogglable="true" initiallyVisibleFields="ProductId,ProductName, ProductDescr">
                     <Table>
-                        <items>
-                            <ColumnListItem type="Navigation" press=".onPress" id="aRow"></ColumnListItem>
-                        </items>
+                        <ColumnListItem press="onPress" type="Navigation">
+
+                        </ColumnListItem>
                     </Table>
                 </smarttable:SmartTable>
             </semantic:content>
+
         </semantic:SemanticPage>
     </Page>
 </mvc:View>

@@ -1,0 +1,19 @@
+<mvc:View xmlns:form="sap.ui.layout.form"
+    xmlns:semantic="sap.f.semantic" controllerName="de.cpro.schulung.chramr.controller.Detail"
+    xmlns:mvc="sap.ui.core.mvc"
+    xmlns="sap.m">
+    <Page title="Product Details" showNavButton="true" navButtonPress="onNavBack">
+        <VBox class="sapUiSmallMargin">
+            <HBox >
+                <Text text="Product ID:" width="175px"/>
+                <Text text="{ProductId}" />
+            </HBox>
+            <HBox >
+                <Text text="Product Name:" width="175px" />
+                <Text text="{ProductName}" />
+            </HBox>
+
+        </VBox>
+    </Page>
+</mvc:View>
+
