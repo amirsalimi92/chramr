@@ -13,8 +13,12 @@
 
             </semantic:headerContent>
             <semantic:content>
-                <smarttable:SmartTable smartFilterId="smartFilterBar" id="products" entitySet="ZC_ESR_UI5_PRODUCT" enableAutoBinding="true">
-
+                <smarttable:SmartTable fieldChange="onChange" smartFilterId="smartFilterBar" id="products" entitySet="ZC_ESR_UI5_PRODUCT" enableAutoBinding="true" editable="false">
+                    <Table>
+                        <items>
+                            <ColumnListItem type="Navigation" press=".onPress" id="aRow"></ColumnListItem>
+                        </items>
+                    </Table>
                 </smarttable:SmartTable>
             </semantic:content>
         </semantic:SemanticPage>
