@@ -1,0 +1,13 @@
+<mvc:View xmlns:semantic="sap.f.semantic"
+    xmlns:smarttable="sap.ui.comp.smarttable" controllerName="de.cpro.schulung.chramr.controller.View1"
+    xmlns:mvc="sap.ui.core.mvc"
+    xmlns="sap.m">
+    <Page id="page" title="{i18n>title}">
+        <Text id="aaaa" text="Hello World"></Text>
+        <semantic:SemanticPage id="semantic">
+            <smarttable:SmartTable id="products" enableAutoBinding="true">
+            </smarttable:SmartTable>
+
+        </semantic:SemanticPage>
+    </Page>
+</mvc:View>

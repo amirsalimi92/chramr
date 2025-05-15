@@ -1,0 +1,7 @@
+<mvc:View controllerName="de.cpro.schulung.chramr.controller.App" displayBlock="true"
+    xmlns:mvc="sap.ui.core.mvc"
+    xmlns="sap.m">
+    <App id="app">
+        <Text id="aaa" text="Hello World"></Text>
+    </App>
+</mvc:View>
