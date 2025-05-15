@@ -5,7 +5,7 @@
     <Page id="page" title="{i18n>title}">
         <Text id="aaaa" text="Hello World"></Text>
         <semantic:SemanticPage id="semantic">
-            <smarttable:SmartTable id="products" enableAutoBinding="true">
+            <smarttable:SmartTable id="products" entitySet="ZC_ESR_UI5_PRODUCT" enableAutoBinding="true">
             </smarttable:SmartTable>
 
         </semantic:SemanticPage>
